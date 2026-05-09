@@ -1,4 +1,3 @@
-<!-- Introduction -->
 ---
 src: ../slides/Introduction/Introduction.md
 ---
@@ -36,4 +35,9 @@ src: ../slides/Built_In_Functions/Built-In_Functions.md
 <!-- Operators -->
 ---
 src: ../slides/Operators/Operators.md
+---
+
+<!-- Decision Making Statements -->
+---
+src: ../slides/Desition_Making_Statements/Desition_Making_Statements.md
 ---
