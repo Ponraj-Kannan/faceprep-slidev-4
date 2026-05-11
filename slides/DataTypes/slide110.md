@@ -4,11 +4,11 @@ title: "Program 1: Hello World"
 ---
 
 <script setup>
-const helloCode = `public class Main 
+const helloCode = `class Main 
 {
     public static void main(String[] args) 
     {
-        // Write your code here
+        // Your code
     }
 }`;
 </script>
@@ -18,9 +18,8 @@ const helloCode = `public class Main
         margin-top: -10px; 
         margin-left: -30px; 
         padding-bottom: 10px; 
-        width: 107%; 
-        max-height: 72vh; 
-        color:#464646ff;
+        width: 107%; max-height: 
+        72vh; 
         background-color: #ffffffff; 
         font-size: .8rem; 
         font-weight: 400; 
@@ -44,6 +43,7 @@ const helloCode = `public class Main
         height: 30px;
     }
 
+
     .box3{
         margin: 0; 
         font-size: 1.5rem; 
@@ -57,15 +57,18 @@ const helloCode = `public class Main
 
     .box4{
         display: flex; 
-        align-items: left;
+        align-items: left; 
+        gap: 0.75rem; 
+        background-color: #f8fafc;
+        border: 1px solid #cbd5e1; 
         border-radius: 4px; 
-        display: flex;
-        flex-direction: row;
-        /* background-color: #121212; */
+        padding:10px; 
+        margin-top:10px
     }
     .box5{
         margin: 0; 
-        font-size:1.2rem;
+        font-size:.9rem;
+        font-weight: 1000;
     }
     .box6{
         display: flex;
@@ -73,35 +76,15 @@ const helloCode = `public class Main
         padding: 10px 0px;
     }
     .box7{
-        width:100%; 
+        width:40%; 
         padding:0px 10px;
-        margin-top: 10px;
 
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        justify-content: center;
-        align-items: center;
     }
     .box8{
-        border: 1px solid #cbd5e1; border-radius: 4px; padding:2px 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 160px;
-        height: 100px;
-    }
-    .container1{
-      /* background-color: #20588fff; */
-      width: 65%;
-      min-height: 10vh;
-    }
-    .container2{
-      /* background-color: #20588fff; */
-      width: 33%;
-      min-height: 10vh;
-      margin-left: 1%;
+      font-size: 0.7rem;
+      border: 1px solid #cbd5e1; border-radius: 4px; padding:2px 10px;
+      display: flex; 
+      flex-direction:row;
     }
     .mini-container {
         border-radius: 4px; 
@@ -123,36 +106,46 @@ const helloCode = `public class Main
         font-size: 1rem;
         display: inline-block; 
         min-width: 32px;
-        text-align: center;
         margin-right: 3px;
 
         background-color: white; 
         padding:5px 10px; 
-        margin-top:10px;
         background-color: #ff914d4e;
         border: 1px solid #ff914dd3;
+        margin-bottom: 5px;
     }
 </style>
 
 <div class="box1">
   <div class="box2">
-    <h2 class="box3">Operators</h2>
+    <h2 class="box3">Data Types</h2>
     <img src="../assets/logo.png"/>
   </div>
 
-  <div class="box4" style="margin-top:20px">
-   <div class="container1">
-   <div v-click class="mini-container-1" style="margin-bottom: 10px; margin-top: -10px;">Assignment Operators</div>
-   <JavaRunner v-click/></div>
-   <div class="container2" style="margin-top: 38px">
-    <div v-click class="mini-container">= assignment</div>
-    <div v-click class="mini-container">+= addition & assign</div>
-    <div v-click class="mini-container">-= subtraction & assign</div>
-    <div v-click class="mini-container">*= multiplication & assign</div>
-    <div v-click class="mini-container">/= division & assign</div>
-    <div v-click class="mini-container">%= modulus & assign</div>
-   </div>
+  <div class="box6" >
+    <JavaRunner :initial-code="helloCode"/>
+    <div class="box7" >
+        <div class="mini-container" v-click>
+            Declare and display a float value
+            → Example: Store and print temperature
+        </div>  
+        <div class="mini-container" v-click>
+            Declare and display a double value
+            → Example: Store and print precise 
+            decimal value
+        </div>
+        <div class="mini-container" v-click>
+            Declare and display a char value
+            → Example: Store and print a grade ('A')
+        </div>
+        <div class="mini-container" v-click>
+            Declare and display a boolean value
+            → Example: Store and print true/false result
+        </div>
+        <div class="mini-container" v-click>
+            Declare and display a String value
+            → Example: Store and print a name
+        </div>
+    </div>
   </div>
 </div>
-
-

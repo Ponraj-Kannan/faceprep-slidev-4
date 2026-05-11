@@ -145,12 +145,12 @@ const helloCode = `public class Main
    <div v-click class="mini-container-1" style="margin-bottom: 10px; margin-top: -10px;">Assignment Operators</div>
    <JavaRunner v-click/></div>
    <div class="container2" style="margin-top: 38px">
-    <div v-click class="mini-container">= assignment</div>
-    <div v-click class="mini-container">+= addition & assign</div>
-    <div v-click class="mini-container">-= subtraction & assign</div>
-    <div v-click class="mini-container">*= multiplication & assign</div>
-    <div v-click class="mini-container">/= division & assign</div>
-    <div v-click class="mini-container">%= modulus & assign</div>
+    <div v-click class="mini-container">&= bitwise AND & assign</div>
+    <div v-click class="mini-container">|= bitwise OR & assign</div>
+    <div v-click class="mini-container">^= bitwise XOR & assign</div>
+    <div v-click class="mini-container"><<= bitwise left shift & assign</div>
+    <div v-click class="mini-container">>>= bitwise right shift & assign</div>
+    <div v-click class="mini-container">>>>= bitwise right shift unsigned & assign</div>
    </div>
   </div>
 </div>

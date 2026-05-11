@@ -103,7 +103,7 @@ const helloCode = `public class Main {
   </div>
 
   <div class="box4" style="margin-top:80px">
-    <h2 v-click class="box5" style="font-size: 2rem; font-weight: 700; letter-spacing: 1px; color:#464646ff">What is <span style="color: #ef5050ff;">Java?</span></h2>
+    <h2 class="box5" style="font-size: 2rem; font-weight: 700; letter-spacing: 1px; color:#464646ff">What is <span style="color: #ef5050ff;">Java?</span></h2>
     <p v-click class="box5" style="padding-top: 10px;">Java is a high-level, object-oriented, platform-independent language — designed so code written once runs everywhere.</p>
   </div>
 

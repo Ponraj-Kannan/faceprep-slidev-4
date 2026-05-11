@@ -136,23 +136,18 @@ const helloCode = `public class Main
 
 <div class="box1">
   <div class="box2">
-    <h2 class="box3">Operators</h2>
+    <h2 class="box3">Decision Making</h2>
     <img src="../assets/logo.png"/>
   </div>
 
   <div class="box4" style="margin-top:20px">
    <div class="container1">
-   <div v-click class="mini-container-1" style="margin-bottom: 10px; margin-top: -10px;">Assignment Operators</div>
+   <div v-click class="mini-container-1" style="margin-bottom: 10px; margin-top: -10px;">Switch Cases</div>
    <JavaRunner v-click/></div>
    <div class="container2" style="margin-top: 38px">
-    <div v-click class="mini-container">= assignment</div>
-    <div v-click class="mini-container">+= addition & assign</div>
-    <div v-click class="mini-container">-= subtraction & assign</div>
-    <div v-click class="mini-container">*= multiplication & assign</div>
-    <div v-click class="mini-container">/= division & assign</div>
-    <div v-click class="mini-container">%= modulus & assign</div>
-   </div>
+    <div class="mini-container">Perform a simple calculator operation on two numbers based on a given operator.</div><br>
+    <div class="mini-container">Two numbers, <b>A</b> and <b>B</b>.</div><br>
+    <div class="mini-container">Character <b>Op</b> representing the operator (<b> +,  -, *, / </b>)</div>
+    </div>
   </div>
 </div>
-
-

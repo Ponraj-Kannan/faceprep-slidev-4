@@ -2,9 +2,19 @@
 src: ./slide20.md
 ---
 
+<!-- Increment and Decrement Operators -->
+---
+src: ./slide25.md
+---
+
 <!-- Assignment Operators -->
 ---
 src: ./slide21.md
+---
+
+<!-- Assignment Operators -->
+---
+src: ./slide27.md
 ---
 
 <!-- Comparison Operators -->
@@ -20,11 +30,6 @@ src: ./slide23.md
 <!-- Bitwise Operators -->
 ---
 src: ./slide24.md
----
-
-<!-- Increment and Decrement Operators -->
----
-src: ./slide25.md
 ---
 
 <!-- Ternary Operator -->

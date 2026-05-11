@@ -249,6 +249,7 @@ const openCompiler = () => {
         frameborder="0"
         allowfullscreen
         sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals"
+        id="compiler-text-area"
       ></iframe>
     </div>
 
@@ -312,7 +313,7 @@ const openCompiler = () => {
               </button>
             </div>
           </div>
-          <iframe
+          <iframe style="height:100%;"
         ref="ocFrameRef"
         :src="oneCompilerUrl"
         class="oc-frame"
@@ -332,7 +333,7 @@ const openCompiler = () => {
 .oc-slide {
   display: flex;
   flex-direction: column;
-  min-height: 400px;
+  min-height: 100%;
   flex: 1 1 auto;
   border-radius: 5px;
   overflow: hidden;
@@ -439,18 +440,22 @@ const openCompiler = () => {
 
 /* ── OneCompiler frame ───────────────────────────────────────────────── */
 .oc-frame-wrap {
-  flex: 1;
+  /* flex: 1;
   overflow: hidden;
   background: #ffffff;
+  width: 100%;
+  height: 100%; */
+  width: 100%;
+  min-height: 230px;
+  background-color: palegoldenrod;
 }
 
 .oc-frame {
   width: 100%;
-  height: 100%;
-  min-height: 400px;
-  display: block;
+  /* display: block; */
   border: none;
-  zoom: 1.2;
+  min-height: 330px;
+  zoom: .7;
 }
 
 /* ── Python Tutor Modal Overlay ──────────────────────────────────────── */
@@ -467,7 +472,7 @@ const openCompiler = () => {
 
 .pt-modal {
   width: 96vw;
-  height: 92vh;
+  height: 95vh;
   max-width: 1200px;
   background: #0f172a;
   border: 1px solid #334155;

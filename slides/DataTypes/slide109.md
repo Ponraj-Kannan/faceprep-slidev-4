@@ -45,7 +45,7 @@ const helloCode = `class Main
 
     .box3{
         margin: 0; 
-        font-size: 1.3rem; 
+        font-size: 1.5rem; 
         font-weight: 700; 
         background-color: #ef5050ff; 
         color: #ffffffff; 
@@ -129,41 +129,20 @@ const helloCode = `class Main
             → Example: Store a small number 
             (i.e. 10) and print it
         </div>
-    <div class="mini-container" v-click>
-        Declare and display a short value
-        → Example: Store a medium range number 
-        (e.g. 20000) and pr 
-    </div>
-    <div class="mini-container" v-click>
-        Declare and display an int value
-        → Example: Store and print age
-    </div>
-    <div class="mini-container" v-click>
-        Declare and display a long value
-        → Example: Store a large number 
-        (e.g., 10,000,000,000) and print it
-    </div>
-    <div class="mini-container" v-click>
-        Declare and display a float value
-        → Example: Store and print temperature
-    </div>  
-    <div class="mini-container" v-click>
-        Declare and display a double value
-        → Example: Store and print precise 
-        decimal value
-    </div>
-    <div class="mini-container" v-click>
-        Declare and display a char value
-        → Example: Store and print a grade ('A')
-    </div>
-    <div class="mini-container" v-click>
-        Declare and display a boolean value
-        → Example: Store and print true/false result
-    </div>
-    <div class="mini-container" v-click>
-        Declare and display a String value
-        → Example: Store and print a name
-    </div>
+        <div class="mini-container" v-click>
+            Declare and display a short value
+            → Example: Store a medium range number 
+            (e.g. 20000) and pr 
+        </div>
+        <div class="mini-container" v-click>
+            Declare and display an int value
+            → Example: Store and print age
+        </div>
+        <div class="mini-container" v-click>
+            Declare and display a long value
+            → Example: Store a large number 
+            (e.g., 10,000,000,000) and print it
+        </div>
     </div>
   </div>
 </div>

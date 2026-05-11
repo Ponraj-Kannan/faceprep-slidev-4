@@ -57,11 +57,11 @@ const helloCode = `public class Main
 
     .box4{
         display: flex; 
-        align-items: left; 
-        gap: 0.75rem;
+        align-items: left;
         border-radius: 4px; 
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        /* background-color: #121212; */
     }
     .box5{
         margin: 0; 
@@ -94,20 +94,43 @@ const helloCode = `public class Main
     }
     .container1{
       /* background-color: #20588fff; */
-      width: 97%;
+      width: 65%;
       min-height: 10vh;
+    }
+    .container2{
+      /* background-color: #20588fff; */
+      width: 33%;
+      min-height: 10vh;
+      margin-left: 1%;
     }
     .mini-container {
         border-radius: 4px; 
         padding: 0px 4px;
-        font-size: 1rem; 
+        font-size: .9rem; 
         color: #374151; 
         background-color: #e2f0feff;
         border: 1px solid #a9c4d2ff;
         display: inline-block; 
         min-width: 32px;
+        margin-right: 3px;
+        padding: 5px;
+        width:100%;
+        margin-bottom: 5px;
+    }
+    .mini-container-1{
+        border-radius: 4px; 
+        padding: 0px 4px;
+        font-size: 1rem;
+        display: inline-block; 
+        min-width: 32px;
         text-align: center;
         margin-right: 3px;
+
+        background-color: white; 
+        padding:5px 10px; 
+        margin-top:10px;
+        background-color: #ff914d4e;
+        border: 1px solid #ff914dd3;
     }
 </style>
 
@@ -117,14 +140,14 @@ const helloCode = `public class Main
     <img src="../assets/logo.png"/>
   </div>
 
-  <div class="box4" style="margin-top:0px">
-    <div v-click class="box5" style="padding-top: 20px; font-weight: 500;">Switch Cases</div>
-    <div v-click class="box5" style="padding-top: 0px;">
-    <div class="mini-container">Perform a simple calculator operation on two numbers based on a given operator.</div><br>
-    <div class="mini-container">Two numbers, <b>A</b> and <b>B</b>.</div><br>
-    <div class="mini-container">Character <b>Op</b> representing the operator (<b> +,  -, *, / </b>)</div>
+  <div class="box4" style="margin-top:20px">
+   <div class="container1">
+   <div v-click class="mini-container-1" style="margin-bottom: 10px; margin-top: -10px;">Switch Cases</div>
+   <JavaRunner v-click/></div>
+   <div class="container2" style="margin-top: 38px">
+    <div v-click class="mini-container">Perform a simple calculator operation on two numbers based on a given operator.</div><br>
+    <div v-click class="mini-container">Two numbers, <b>A</b> and <b>B</b>.</div><br>
+    <div v-click class="mini-container">Character <b>Op</b> representing the operator <br>(<b> +,  -, *, / </b>)</div>
     </div>
-    <div v-click></div>
-   <div class="container1"><JavaRunner v-click/></div>
   </div>
 </div>
