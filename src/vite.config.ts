@@ -1,6 +1,7 @@
 import { defineConfig, loadEnv } from 'vite'
 
 export default defineConfig(({ mode }) => {
+  console.log(">>>> VITE CONFIG LOADED <<<<", mode);
   const env = loadEnv(mode, process.cwd(), '')
   return {
     server: {
@@ -11,26 +12,38 @@ export default defineConfig(({ mode }) => {
           rewrite: (path) => path.replace(/^\/api\/run/, '/run'),
           configure: (proxy, options) => {
             proxy.on('proxyReq', (proxyReq, req, res) => {
-               if (env.VITE_EXECUTION_API_KEY) {
-                 proxyReq.setHeader('x-api-key', env.VITE_EXECUTION_API_KEY)
-               }
+              if (env.VITE_EXECUTION_API_KEY) {
+                proxyReq.setHeader('x-api-key', env.VITE_EXECUTION_API_KEY)
+              }
+            })
+          }
+        },
+        '/oc-api': {
+          target: 'https://api.onecompiler.com',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/oc-api/, ''),
+          configure: (proxy, options) => {
+            proxy.on('proxyReq', (proxyReq, req, res) => {
+              if (env.VITE_ONECOMPILER_API_KEY) {
+                proxyReq.setHeader('x-api-key', env.VITE_ONECOMPILER_API_KEY)
+              }
             })
           }
         }
       }
     },
     ssr: {
-    noExternal: [
-      'monaco-editor',
-      'popmotion',
-      'style-value-types',
-      'unhead',
-      '@unhead/vue',
-      '@floating-ui/core',
-      '@vueuse/core',
-      '@slidev/parser',
-      '@slidev/client'
-    ]
-  }
+      noExternal: [
+        'monaco-editor',
+        'popmotion',
+        'style-value-types',
+        'unhead',
+        '@unhead/vue',
+        '@floating-ui/core',
+        '@vueuse/core',
+        '@slidev/parser',
+        '@slidev/client'
+      ]
+    }
   }
 })
