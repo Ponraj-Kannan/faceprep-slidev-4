@@ -433,19 +433,26 @@ const executeCode = async () => {
       }))
     }
 
-    console.log(payload)
-
-    const res = await fetch('/oc-api/v1/run', {
+    const res = await fetch('/api/oc-run', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     })
 
-    const data = await res.json()
-
-    if (!res.ok || data.status === 'failed') {
+    // ✅ Safely parse JSON — handle empty/non-JSON responses
+    let data = null
+    try {
+      const text = await res.text()
+      data = text ? JSON.parse(text) : null
+    } catch {
       isError.value = true
-      output.value = data.error || data.message || 'Execution failed.'
+      output.value = `Server returned an invalid response (HTTP ${res.status}). Check your /api/oc-run endpoint.`
+      return
+    }
+
+    if (!res.ok || !data || data.status === 'failed') {
+      isError.value = true
+      output.value = data?.error || data?.message || `Request failed with status ${res.status}.`
       return
     }
 
